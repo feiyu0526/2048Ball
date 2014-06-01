@@ -111,6 +111,9 @@ public class GameRenderer {
 		//fruit = AssetLoader.fruit;
 		yoghurtImage = AssetLoader.yoghurt;
 		fingerAnimation = AssetLoader.fingerAnimation;
+		
+		
+		
 	}
 
 
