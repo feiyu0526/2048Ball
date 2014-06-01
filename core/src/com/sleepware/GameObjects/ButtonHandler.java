@@ -217,16 +217,6 @@ public class ButtonHandler {
 			}
 		});		
 		
-		
-		/**************************************************************************/
-		/* READY */
-		/*************************************************************************/
-				
-		buttonY = (gameHeight/10)*4;
-		addLabel("READY...", (gameWidth / 2), buttonY, GameState.READY, null);
-		
-		
-		//onStateChange();
 	}
 		
 	

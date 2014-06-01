@@ -1,6 +1,7 @@
 package com.sleepware.GameWorld;
 
 
+import com.sleepware.GameObjects.BallHandler;
 import com.sleepware.GameObjects.ButtonHandler;
 import com.sleepware.GameObjects.ScoreBoard;
 import com.sleepware.GameObjects.Title;
@@ -27,6 +28,8 @@ public class GameWorld {
 	private StaticBackgroundFruit staticBackgroundFruit;
 	private Hud hud;
 	*/
+	private BallHandler ballhandler;
+
 	private ButtonHandler buttonhandler;
 	private Title title;
 	private ScoreBoard scoreBoard;
@@ -81,6 +84,9 @@ public class GameWorld {
 		staticBackgroundFruit = new StaticBackgroundFruit(0, yoghurtStart, staticFruitDiameter, minX+20, maxX-20);
 		hud = new Hud(this, gameHeight, minX, maxX);
 		*/
+		
+		ballhandler = new BallHandler(this, gameWidth, gameHeight);
+		
 		title = new Title(minX, maxX, gameHeight, spoonSize, spoonHandleWidth, spoonHandleHeight, birdDiameter);
 		buttonhandler = new ButtonHandler(this, gameWidth, gameHeight);
 		scoreBoard = new ScoreBoard(this, minX, maxX, gameHeight, fallingFruitDiameter);
@@ -96,10 +102,6 @@ public class GameWorld {
 		case OPTIONS:
 			title.update(delta);
 			//bird.update(delta);
-			//scroller.updateReady(delta);
-			break;
-			
-		case READY:
 			//scroller.updateReady(delta);
 			break;
 
